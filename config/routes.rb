@@ -1,6 +1,15 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  root 'posts#index'
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :posts
+
+  get 'user/new', to: 'users#new'
+  post 'user', to: 'users#create'
+  post 'login', to: 'users#login'
+  get 'logout', to: 'users#logout'
+  get 'user/:id/fav/', to: 'users#fav'
+
+  # get 'posts/:id/fav/new', to: 'favs#new'
+  # post 'posts/:id/fav/', to: 'favs#create'
+  # delete 'posts/:id/fav/destroy', to: 'favs#destroy'
 end
