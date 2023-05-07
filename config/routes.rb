@@ -7,7 +7,8 @@ Rails.application.routes.draw do
   post 'user', to: 'users#create'
   post 'login', to: 'users#login'
   get 'logout', to: 'users#logout'
-  get 'user/:id/fav/', to: 'users#fav'
+
+  get 'user/:id/fav/', to: 'favs#show'
 
   # get 'posts/:id/fav/new', to: 'favs#new'
   # post 'posts/:id/fav/', to: 'favs#create'
