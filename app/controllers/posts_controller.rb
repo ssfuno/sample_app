@@ -13,6 +13,4 @@ class PostsController < ApplicationController
   end
   def destroy
   end
-  def find
-  end
 end
