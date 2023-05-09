@@ -1,16 +1,14 @@
 Rails.application.routes.draw do
   root 'posts#index'
 
-  resources :posts
+  resources :posts, except: [:index]
+  post 'posts/:id/fav/create', to: 'favorites#create'
+  delete 'posts/:id/fav/destroy', to: 'favorites#destroy'
 
-  get 'user/new', to: 'users#new'
-  post 'user', to: 'users#create'
-  post 'login', to: 'users#login'
-  get 'logout', to: 'users#logout'
+  resources :users, only: [:new, :create]
+  get 'user/:id/fav/', to: 'favorites#show'
 
-  get 'user/:id/fav/', to: 'favs#show'
-
-  # get 'posts/:id/fav/new', to: 'favs#new'
-  # post 'posts/:id/fav/', to: 'favs#create'
-  # delete 'posts/:id/fav/destroy', to: 'favs#destroy'
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
 end
