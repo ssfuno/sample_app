@@ -1,0 +1,9 @@
+%h1 レシピ一覧
+%table
+  %thead
+    %tr
+      %th レシピ名
+  %tbody
+    - @recipes.each do |recipe|
+      %tr
+        %td= recipe.title
