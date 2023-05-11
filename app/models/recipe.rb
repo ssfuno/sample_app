@@ -1,3 +1,3 @@
 class Recipe < ApplicationRecord
-  validates :email, :name, :password, :password_confirmation, presence: true
+  validates :title, :material, :process, presence: true
 end
