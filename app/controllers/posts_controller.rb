@@ -20,6 +20,7 @@ class PostsController < ApplicationController
 
   private
     def task_params
-      params.require(:recipe).permit(:photo, :title, :material, :process, :cooking_minute)
+      puts(params.require(:recipe))
+      params.require(:recipe).permit(:title, :material, :process, :cooking_minute)
     end
 end

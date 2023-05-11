@@ -1,3 +1,20 @@
 %h1 新規レシピ
-= form_with model: @recipe do |form|
-  = form.text
+= form_with model: @recipe, url: {controller: 'posts', action: 'create' } do |form|
+  %p
+    = form.label :title, "レシピタイトル"
+    = form.text_field :title
+  %p
+    = form.label :material, "必要な具材"
+    = form.text_area :material
+  %p
+    = form.label :process, "料理手順"
+    = form.text_area :process
+  %p
+    = form.label :cooking_minute, "料理にかかる時間（分）"
+    = form.number_field :cooking_minute
+  -# %p
+  -#   = form.label :photo, "料理の画像"
+  -#   = form.file_field :photo
+  %p
+    = form.submit "送信"
+= link_to '戻る', root_path
