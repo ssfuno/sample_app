@@ -13,3 +13,84 @@
  *= require_tree .
  *= require_self
  */
+
+ form {
+  /* width: 100%; */
+  max-width: 800px;
+  margin-left: 0;
+  padding: 40px;
+  background-color: #FFEECF;
+  border-radius: 5px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+input[type="text"],
+textarea {
+  display: block;
+  width: 95%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+}
+
+input[type="number"] {
+  display: block;
+  width: 10%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+input[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.post-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.post-list-item {
+  margin-bottom: 20px;
+}
+
+.post-list-item a {
+  display: block;
+  background-color: #FFEECF;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.post-list-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.post-list-item p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}

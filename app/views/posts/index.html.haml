@@ -1,10 +1,8 @@
-%h1 レシピ一覧
-%table
-  %thead
-    %tr
-      %th レシピ名
-  %tbody
-    - @recipes.each do |recipe|
-      %tr
-        %td= recipe.title
-= link_to '追加', new_post_path
+%h1 Your Recipes
+%ul.post-list
+  - @recipes.each do |recipe|
+    %li.post-list-item
+      %a(href = "posts/#{recipe.id}")
+        %h2= recipe.title
+        %p= recipe.created_at
+= link_to 'レシピ追加', new_post_path
