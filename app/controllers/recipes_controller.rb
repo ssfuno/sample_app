@@ -1,4 +1,4 @@
-class PostsController < ApplicationController
+class RecipesController < ApplicationController
   def index
     @recipes = Recipe.all
   end
@@ -20,7 +20,6 @@ class PostsController < ApplicationController
 
   private
     def task_params
-      puts(params.require(:recipe))
       params.require(:recipe).permit(:title, :material, :process, :cooking_minute)
     end
 end

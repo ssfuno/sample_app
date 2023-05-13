@@ -1,10 +1,10 @@
 %h1 レシピ新規作成
-= form_with model: @recipe, url: {controller: 'posts', action: 'create' } do |form|
+= form_with model: @recipe do |form|
   %p
-    = form.label :photo, "料理の画像"
+    = form.label :photo, "イメージ画像"
     = form.file_field :photo
   %p
-    = form.label :title, "レシピタイトル"
+    = form.label :title, "タイトル"
     = form.text_field :title
   %p
     = form.label :material, "必要な具材"
