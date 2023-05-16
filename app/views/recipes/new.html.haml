@@ -5,13 +5,13 @@
     = form.file_field :photo
   %p
     = form.label :title, "タイトル"
-    = form.text_field :title
+    = form.text_field :title, required: true
   %p
     = form.label :material, "必要な具材"
-    = form.text_area :material
+    = form.text_area :material, required: true
   %p
     = form.label :process, "料理手順"
-    = form.text_area :process
+    = form.text_area :process, required: true
   %p
     = form.label :cooking_minute, "料理にかかる時間（分）"
     = form.number_field :cooking_minute

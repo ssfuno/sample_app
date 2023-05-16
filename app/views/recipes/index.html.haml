@@ -2,7 +2,7 @@
 %ul.post-list
   - @recipes.each do |recipe|
     %li.post-list-item
-      %a(href = "posts/#{recipe.id}")
+      %a(href = "recipes/#{recipe.id}")
         %h2= recipe.title
         %p= recipe.created_at
 = link_to 'レシピ追加', new_recipe_path

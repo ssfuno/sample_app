@@ -14,12 +14,12 @@
  *= require_self
  */
 
- form {
+form {
   /* width: 100%; */
   max-width: 800px;
   margin-left: 0;
   padding: 40px;
-  background-color: #FFEECF;
+  background-color: #fecf;
   border-radius: 5px;
   /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
 }
@@ -56,7 +56,7 @@ input[type="number"] {
 input[type="submit"] {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #007bff;
+  background-color: #07bf;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -80,7 +80,7 @@ input[type="submit"]:hover {
 
 .post-list-item a {
   display: block;
-  background-color: #FFEECF;
+  background-color: #fecf;
   padding: 10px;
   text-decoration: none;
 }
