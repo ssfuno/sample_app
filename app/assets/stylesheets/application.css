@@ -14,6 +14,31 @@
  *= require_self
  */
 
+* {
+    margin: 0px;
+    padding: 0px;
+}
+  
+
+header {
+  background-color: #d9d9d9;
+  width: 100%;
+  padding: 10px;
+  margin: 0 0 30px 0;
+}
+
+.header-logo a{
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header-menus {
+  float: right;
+  padding-right: 20px;
+}
+
 form {
   /* width: 100%; */
   max-width: 800px;
