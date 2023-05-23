@@ -18,7 +18,7 @@
     margin: 0px;
     padding: 0px;
 }
-  
+
 header {
   background-color: #EBEBEB;
   width: 100%;
@@ -57,58 +57,67 @@ header {
   font-size: 14px;
 }
 
-form {
-  /* width: 100%; */
-  max-width: 800px;
-  margin-left: 0;
-  padding: 40px;
-  background-color: #fecf;
-  border-radius: 5px;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); */
+.recipe-container {
+  padding: 0 100px 0 100px;
 }
 
-label {
+.recipe-container h1 {
+  margin: 0 0 30px 0;
+}
+
+.recipe-container form {
+  display: flex;
+  max-width: 800px;
+  padding: 50px;
+  background-color: #FFFBF1;
+  border-radius: 5px;
+  flex-direction: column;
+ }
+
+.recipe-container label {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
 }
 
-input[type="text"],
+.recipe-container input[type="file"] {
+  margin-bottom: 20px;
+}
+
+.recipe-container input[type="text"],
 textarea {
-  display: block;
   width: 95%;
   padding: 10px;
   margin-bottom: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #fff;
-  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  background-color: white;
   resize: none;
 }
 
-input[type="number"] {
-  display: block;
+.recipe-container input[type="number"] {
   width: 10%;
   padding: 10px;
-  margin-bottom: 20px;
   border: none;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: white;
 }
 
-input[type="submit"] {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #07bf;
-  color: #fff;
-  border: none;
+.recipe-container input[type="submit"] {
+  padding: 15px 120px;
+  background-color: white;
+  color: black;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.2s;
+  align-self: center;
+  border: 1px solid black;
 }
 
-input[type="submit"]:hover {
-  background-color: #0069d9;
+.recipe-container .flexbox {
+  display: flex;
+  column-gap: 5px;
+  align-items: center;
+  margin-bottom: 40px;
 }
 
 .post-list {
