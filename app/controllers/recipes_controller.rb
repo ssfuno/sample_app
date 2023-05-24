@@ -20,6 +20,6 @@ class RecipesController < ApplicationController
 
   private
     def task_params
-      params.require(:recipe).permit(:title, :material, :process, :cooking_minute)
+      params.require(:recipe).permit(:photo, :title, :material, :process, :cooking_minute)
     end
 end
