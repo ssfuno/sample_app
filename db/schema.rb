@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_13_010823) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_28_135600) do
   create_table "favorites", force: :cascade do |t|
     t.integer "user_id", null: false
     t.integer "recipe_id", null: false
@@ -36,9 +36,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_13_010823) do
     t.string "email", null: false
     t.string "name", null: false
     t.string "password", null: false
-    t.string "password_confirmation", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
   end
 
   add_foreign_key "favorites", "recipes", column: "user_id"
