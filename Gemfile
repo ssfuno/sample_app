@@ -3,13 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.2.2"
 
-# Use Devise
+# Customize
 gem 'devise'
-
-# Use Carrierwave to upload recipe photo
 gem 'carrierwave', '~> 2.0'
-
-# Use haml
+gem 'mini_magick'
 gem 'haml-rails'
 gem 'erb2haml'
 
