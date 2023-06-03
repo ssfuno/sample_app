@@ -10,7 +10,7 @@
     = form.label :process, "料理手順"
     = form.text_area :process, required: true
     = form.label :cooking_minute, "料理にかかる時間（分）"
-    .flexbox
+    .cooking-time
       = form.number_field :cooking_minute
       分
     = form.submit "登録する"
