@@ -1,2 +1,23 @@
-%h1 Posts#show
-%p Find me in app/views/posts/show.html.erb
+.recipe-detail-container
+  .upper-container
+    .title
+      = @recipe.title
+    .cooking-time
+      = "料理時間　#{@recipe.cooking_minute}分"
+  .username
+    = "作成者：#{@recipe.user.name}"
+  .photo
+    = image_tag @recipe.photo.url, size: '600x400'
+  .itemname
+    必要な具材
+  .item
+    = simple_format(@recipe.material)
+  .itemname
+    料理手順
+  .item
+    = simple_format(@recipe.process)
+  .favorite
+    お気に入り
+    .ellipse
+      登録する
+= link_to 'レシピ追加', new_recipe_path
