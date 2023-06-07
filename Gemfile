@@ -9,6 +9,7 @@ gem 'carrierwave', '~> 2.0'
 gem 'mini_magick'
 gem 'haml-rails'
 gem 'erb2haml'
+gem 'pry-rails'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.4", ">= 7.0.4.3"

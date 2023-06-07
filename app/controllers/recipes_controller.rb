@@ -5,7 +5,7 @@ class RecipesController < ApplicationController
   end
   
   def show
-    @recipe = Recipe.find(params[:id])
+    @recipe = Recipe.find_by(id: params[:id])
   end
   
   def new
@@ -15,14 +15,25 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
-    @recipe.save
-    redirect_to root_path
+    if @recipe.save
+      redirect_to root_path
+    else
+      binding.pry
+      render("recipes/new")
+    end
   end
   
   def edit
+    @recipe  = Recipe.find_by(id: params[:id])
   end
   
   def update
+    @recipe = Recipe.find_by(id: params[:id])
+    if @recipe.update(recipe_params)
+      redirect_to root_path
+    else
+      render("recipes/edit")
+    end
   end
   
   def destroy
