@@ -1,8 +1,6 @@
 .recipe-container
-  %h1 レシピ新規作成
+  %h1 レシピ編集
   = form_with model: @recipe do |form|
-    - @recipe.errors.full_messages.each do |message|
-      = message
     = form.label :photo, "イメージ画像"
     = form.file_field :photo
     = form.label :title, "タイトル"
