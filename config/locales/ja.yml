@@ -26,6 +26,8 @@ ja:
         unconfirmed_email: 未確認Eメール
         unlock_token: ロック解除用トークン
         updated_at: 更新日
+      recipe:
+        photo: イメージ画像
     models:
       user: ユーザー
     errors:
@@ -47,6 +49,10 @@ ja:
               too_long: "は%{count}文字以下に設定して下さい。"
               invalid: "は有効でありません。"
               confirmation: "が内容とあっていません。"
+        recipe:
+          attributes:
+            photo:
+              blank: "が添付されていません。"
   devise:
     confirmations:
       confirmed: メールアドレスが確認できました。

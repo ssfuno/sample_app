@@ -174,19 +174,30 @@ input[type="password"] {
   color: black;
   background-color: #fecf;
   /* column-gap: 30px; */
-  text-decoration: none;
   margin-bottom: 30px;
   display: flex;
   flex-direction: row;
 }
 
 .recipe-list-item .text-div {
+  width: 100%;
   padding: 15px 30px;
+  font-weight: bold;
 }
 
-.recipe-list-item h2 {
+.recipe-list-item .text-div .recipe-title {
   font-size: 20pt;
   margin-bottom: 85px;
+}
+
+.recipe-list-item .text-div a {
+  color: black;
+  text-decoration: none;
+}
+
+.recipe-list-item .text-div .recipe-lower-div {
+  display: flex;
+  justify-content: space-between;
 }
 
 .recipe-detail-container {
