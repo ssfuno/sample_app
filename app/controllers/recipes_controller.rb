@@ -18,8 +18,7 @@ class RecipesController < ApplicationController
     if @recipe.save
       redirect_to root_path
     else
-      binding.pry
-      render("recipes/new")
+      render("recipes/new", status: :unprocessable_entity)
     end
   end
   

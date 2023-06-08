@@ -1,13 +1,18 @@
 .recipe-container
   - @recipes.each do |recipe|
-    %a.recipe-list-item(href = "recipes/#{recipe.id}")
+    .recipe-list-item
       .image-div
         = image_tag recipe.photo.url
       .text-div
-        %h2
-          = recipe.title          
-        %p
+        .recipe-title
+          = link_to recipe.title, "recipes/#{recipe.id}"      
+        .recipe-user-name
           = "作成者：#{recipe.user.name}"
-          %br
-          = "投稿日：#{l recipe.created_at}"
+        .recipe-lower-div
+          .created-at
+            = "投稿日：#{l recipe.created_at}"
+          .link-to-edit
+            - if user_signed_in?
+              - if recipe.user.id == current_user.id
+                = link_to '編集する', "recipes/#{recipe.id}/edit"      
   = link_to 'レシピ追加', new_recipe_path
