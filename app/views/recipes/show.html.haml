@@ -23,6 +23,5 @@
   - if user_signed_in?
     - if @recipe.user.id == current_user.id
       .delete
-        - puts(@recipe.id)
-        = link_to 'レシピを削除する', "/recipes/#{@recipe.id}", data: { turbo_method: :delete }
+        = link_to 'レシピを削除する', recipe_path(@recipe.id), data: { turbo_method: :delete }
 = link_to 'レシピ追加', new_recipe_path

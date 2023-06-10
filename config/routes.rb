@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'recipes#index'
 
   devise_for :users
-  get 'users/user_id:/favorites', to: 'favorites#show'
+  get 'users/user_id:/favorites', to: 'favorites#index', as: 'user_favorite'
 
   # resources :users, only: [:new, :create] do
   #   resources :favorites, only: [:show]
