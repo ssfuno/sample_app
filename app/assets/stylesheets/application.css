@@ -107,7 +107,7 @@ input[type="password"] {
   padding: 0 100px 0 100px;
 }
 
-.recipe-container form {
+.recipe-container .recipe-form {
   display: flex;
   max-width: 800px;
   padding: 50px;
@@ -154,7 +154,7 @@ input[type="password"] {
   background-color: white;
 }
 
-.recipe-container input[type="submit"] {
+.recipe-container > input[type="submit"] {
   padding: 15px 120px;
   background-color: white;
   color: black;
@@ -167,6 +167,34 @@ input[type="password"] {
 
 .recipe-container .cooking-time {
   margin-bottom: 40px;
+}
+
+.recipe-container .search-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.recipe-container .search-form .search-input {
+  width: 800px;
+  border-color: #EBEBEB;
+  border-style: solid;
+  border-width: medium;
+}
+
+.recipe-container .search-form .search-btn {
+  background-color: #F6F6F6;
+  border-style: none;
+  width: 85px;
+  height: 40px;
+  /* padding: 50px; */
+  font-weight: normal;
+  border-radius: 6px;
+}
+
+.recipe-container .search-result-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 30px;
 }
 
 .recipe-list-item {
