@@ -15,4 +15,6 @@ Rails.application.routes.draw do
   resources :recipes, except: [:index] do
     resources :favorites, only: [:create, :destroy]
   end
+
+  get 'recipes/search', to: 'searches#index', as: 'recipe_search'
 end
