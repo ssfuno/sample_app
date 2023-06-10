@@ -5,7 +5,7 @@
         = image_tag recipe.photo.url
       .text-div
         .recipe-title
-          = link_to recipe.title, "/recipes/#{recipe.id}"      
+          = link_to recipe.title, recipe_path(recipe.id)
         .recipe-user-name
           = "作成者：#{recipe.user.name}"
         .recipe-lower-div
@@ -14,5 +14,5 @@
           .link-to-edit
             - if user_signed_in?
               - if recipe.user.id == current_user.id
-                = link_to '編集する', "/recipes/#{recipe.id}/edit"      
+                = link_to '編集する', edit_recipe_path(recipe.id)
   = link_to 'レシピ追加', new_recipe_path
