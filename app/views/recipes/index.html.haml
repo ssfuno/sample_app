@@ -1,4 +1,9 @@
 .recipe-container
+  = form_with(url: root_path, method: :get, class: "search-form") do |form|
+    = form.text_field :keyword, class: "search-input"
+    = form.submit "検索", class: "search-btn", name: nil
+  .search-result-title
+    = "#{params[:keyword]} の検索結果" if params[:keyword]
   - @recipes.each do |recipe|
     .recipe-list-item
       .image-div
