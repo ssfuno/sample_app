@@ -282,11 +282,24 @@ input[type="password"] {
   gap: 10px
 }
 
-.ellipse {
+.ellipse-post {
   width: 100px;
 	height: 50px;
   font-size: 12pt;
  	background:#FFFBF1;
+  border-style: solid;
+  border-width: thin;
+  border-color: #EBEBEB;
+	border-radius: 50px / 25px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.ellipse-delete {
+  width: 100px;
+	height: 50px;
+  font-size: 12pt;
+ 	background:#F2C75A;
   border-style: solid;
   border-width: thin;
   border-color: #EBEBEB;

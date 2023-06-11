@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   # delete 'logout', to: 'sessions#destroy'
 
   resources :recipes, except: [:index] do
-    resources :favorites, only: [:create, :destroy]
+    resource :favorites, only: [:create, :destroy]
   end
 end
