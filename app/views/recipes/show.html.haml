@@ -28,4 +28,3 @@
     - if @recipe.user.id == current_user.id
       .delete
         = link_to "レシピを削除する", recipe_path(@recipe.id), data: { turbo_method: :delete, turbo_confirm: "レシピを削除しますか？" }
-= link_to "レシピ追加", new_recipe_path
