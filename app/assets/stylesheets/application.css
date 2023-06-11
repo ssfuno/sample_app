@@ -316,7 +316,11 @@ input[type="password"] {
   padding: 10px 10px;
 }
 
-.delete a {
-  color: white;
+.recipe-detail-container a {
+  color: black;
   text-decoration: none;
+}
+
+.recipe-detail-container .delete a {
+  color: white;
 }

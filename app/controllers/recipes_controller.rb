@@ -1,4 +1,5 @@
 class RecipesController < ApplicationController
+  before_action :authenticate, only: [:new, :edit, :update, :destroy]
 
   def index
     @recipes = Recipe.all
@@ -45,5 +46,9 @@ class RecipesController < ApplicationController
   private
     def recipe_params
       params.require(:recipe).permit(:photo, :title, :material, :process, :cooking_minute)
+    end
+
+    def authenticate
+      redirect_to root_path unless user_signed_in?
     end
 end
