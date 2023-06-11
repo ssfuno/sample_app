@@ -11,19 +11,21 @@
   %body
     %header
       .header-logo
-        = link_to 'Your Recipes', root_path
+        = link_to "Your Recipes", root_path
       .header-menus
         %ul
-          %li
-            = link_to '新規会員登録', new_user_registration_path
-          %li
-            = link_to 'ログイン', new_user_session_path
-          %li
-            = link_to 'ログアウト', destroy_user_session_path, data: { turbo_method: :delete }
-    -# %p.notice
-    -#   = notice
-    -# %p.alert
-    -#   = alert
+          - if user_signed_in?
+            %li
+              = link_to "レシピを作成する", new_recipe_path
+            %li
+              = link_to "お気に入り一覧", user_favorite_path(current_user.id)
+            %li
+              = link_to "ログアウト", destroy_user_session_path, data: { turbo_method: :delete }
+          - else
+            %li
+              = link_to "新規会員登録", new_user_registration_path
+            %li
+              = link_to "ログイン", new_user_session_path
     - flash.each do |message_type, message|
       = content_tag :div, message, class: message_type
     = yield

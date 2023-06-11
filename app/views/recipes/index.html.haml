@@ -19,5 +19,4 @@
           .link-to-edit
             - if user_signed_in?
               - if recipe.user.id == current_user.id
-                = link_to '編集する', edit_recipe_path(recipe.id)
-  = link_to 'レシピ追加', new_recipe_path
+                = link_to "編集する", edit_recipe_path(recipe.id)

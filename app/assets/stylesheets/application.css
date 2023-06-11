@@ -282,11 +282,24 @@ input[type="password"] {
   gap: 10px
 }
 
-.ellipse {
+.ellipse-post {
   width: 100px;
 	height: 50px;
   font-size: 12pt;
  	background:#FFFBF1;
+  border-style: solid;
+  border-width: thin;
+  border-color: #EBEBEB;
+	border-radius: 50px / 25px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.ellipse-delete {
+  width: 100px;
+	height: 50px;
+  font-size: 12pt;
+ 	background:#F2C75A;
   border-style: solid;
   border-width: thin;
   border-color: #EBEBEB;
@@ -303,7 +316,11 @@ input[type="password"] {
   padding: 10px 10px;
 }
 
-.delete a {
-  color: white;
+.recipe-detail-container a {
+  color: black;
   text-decoration: none;
+}
+
+.recipe-detail-container .delete a {
+  color: white;
 }
