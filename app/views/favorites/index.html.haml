@@ -1,1 +1,14 @@
-%h1 テスト
+.recipe-container
+  %h1 あなたのお気に入り一覧
+  - @favorite_recipes.each do |recipe|
+    .recipe-list-item
+      .image-div
+        = image_tag recipe.photo.url
+      .text-div
+        .recipe-title
+          = link_to recipe.title, recipe_path(recipe.id)
+        .recipe-user-name
+          = "作成者：#{recipe.user.name}"
+        .recipe-lower-div
+          .created-at
+            = "投稿日：#{l recipe.created_at}"
