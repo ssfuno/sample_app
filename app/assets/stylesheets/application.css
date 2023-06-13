@@ -271,7 +271,7 @@ input[type="password"] {
   box-sizing: border-box;
 }
 
-.recipe-detail-container .favorite {
+.recipe-detail-container #favorite {
   font-size: 20pt;
   font-weight: bold;
   margin-bottom: 15px;
