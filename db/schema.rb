@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_31_124438) do
+ActiveRecord::Schema[7.0].define(version: 2023_06_12_000154) do
   create_table "favorites", force: :cascade do |t|
-    t.integer "user_id", null: false
-    t.integer "recipe_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id", null: false
+    t.integer "recipe_id", null: false
     t.index ["recipe_id"], name: "index_favorites_on_recipe_id"
     t.index ["user_id"], name: "index_favorites_on_user_id"
   end
@@ -41,7 +41,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_31_124438) do
     t.index ["email"], name: "index_users_on_email", unique: true
   end
 
-  add_foreign_key "favorites", "recipes", column: "user_id"
-  add_foreign_key "favorites", "users", column: "recipe_id"
+  add_foreign_key "favorites", "recipes"
+  add_foreign_key "favorites", "users"
   add_foreign_key "recipes", "users"
 end

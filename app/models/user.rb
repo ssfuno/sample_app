@@ -3,8 +3,9 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable, :validatable
   validates :email, :name, :password_confirmation, presence: true
-  has_many :recipes
-  has_many :favorites
+  has_many :recipes, dependent: :destroy
+  has_many :favorites, dependent: :destroy
+  has_many :favorite_recipes, through: :favorites, source: :recipe
 
   validate :password_regex, :email_regrex
 
