@@ -1,0 +1,7 @@
+お気に入り
+- if recipe.favorited_by?(current_user)
+  .ellipse-delete
+    = link_to "削除する", recipe_favorites_path(@recipe.id), data: { turbo_method: :delete }, remote: true
+- else
+  .ellipse-post
+    = link_to "登録する", recipe_favorites_path(@recipe.id), data: { turbo_method: :post }, remote: true
