@@ -18,13 +18,14 @@
     = simple_format(@recipe.process)
   - if user_signed_in?
     #favorite
-      お気に入り
-      - if @recipe.favorited_by?(current_user)
-        .ellipse-delete
-          = link_to "削除する", recipe_favorites_path(@recipe.id), data: { turbo_method: :delete }, remote:true
-      - else
-        .ellipse-post
-          = link_to "登録する", recipe_favorites_path(@recipe.id), data: { turbo_method: :post }, remote:true
+      = render partial: "favorites/favorite", locals: {recipe: @recipe}
+      -# お気に入り
+      -# - if @recipe.favorited_by?(current_user)
+      -#   .ellipse-delete
+      -#     = link_to "削除する", recipe_favorites_path(@recipe.id), data: { turbo_method: :delete }
+      -# - else
+      -#   .ellipse-post
+      -#     = link_to "登録する", recipe_favorites_path(@recipe.id), data: { turbo_method: :post }
     - if @recipe.user.id == current_user.id
       .delete
         = link_to "レシピを削除する", recipe_path(@recipe.id), data: { turbo_method: :delete, turbo_confirm: "レシピを削除しますか？" }
