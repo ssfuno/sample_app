@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  validates :title, :material, :process, :photo, presence: true
+  validates :title, :material, :process, presence: true
   belongs_to :user
   has_many :favorites, dependent: :destroy
   mount_uploader :photo, PhotoUploader
