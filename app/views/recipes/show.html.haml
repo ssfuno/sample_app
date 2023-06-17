@@ -18,6 +18,6 @@
     = simple_format(@recipe.process)
   - if user_signed_in?
     = render "recipes/favorite", recipe: @recipe, liked: @recipe.favorited_by?(current_user)
-    - if @recipe.user.id == current_user.id
+    - if @recipe.user == current_user
       .delete
         = link_to "レシピを削除する", recipe_path(@recipe.id), data: { turbo_method: :delete, turbo_confirm: "レシピを削除しますか？" }
