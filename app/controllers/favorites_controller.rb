@@ -15,7 +15,7 @@ class FavoritesController < ApplicationController
     favorite.save
     render turbo_stream: turbo_stream.replace(
       'favorite',
-      partial: 'favorites/favorite',
+      partial: 'recipes/favorite',
       locals: { recipe: @recipe, liked: true},
     )
   end
@@ -26,7 +26,7 @@ class FavoritesController < ApplicationController
     favorite.destroy
     render turbo_stream: turbo_stream.replace(
       'favorite',
-      partial: 'favorites/favorite',
+      partial: 'recipes/favorite',
       locals: { recipe: @recipe, liked: false },
     )
   end
