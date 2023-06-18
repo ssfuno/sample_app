@@ -7,7 +7,7 @@ class RecipesController < ApplicationController
   end
   
   def show
-    @recipe = Recipe.find_by(id: params[:id])
+    @recipe = Recipe.find(params[:id])
   end
   
   def new
@@ -25,11 +25,11 @@ class RecipesController < ApplicationController
   end
   
   def edit
-    @recipe  = Recipe.find_by(id: params[:id])
+    @recipe  = Recipe.find(params[:id])
   end
   
   def update
-    @recipe = Recipe.find_by(id: params[:id])
+    @recipe = Recipe.find(params[:id])
     if @recipe.update(recipe_params)
       redirect_to root_path
     else
@@ -38,7 +38,7 @@ class RecipesController < ApplicationController
   end
   
   def destroy
-    @recipe = Recipe.find_by(id: params[:id])
+    @recipe = Recipe.find(params[:id])
     @recipe.destroy
     redirect_to root_path, status: :see_other
   end
