@@ -2,7 +2,7 @@ class FavoritesController < ApplicationController
   before_action :authenticate
 
   def index
-    user = User.find(arams[:user_id])
+    user = User.find(current_user.id)
     @favorite_recipes = user.favorite_recipes
   end
 
