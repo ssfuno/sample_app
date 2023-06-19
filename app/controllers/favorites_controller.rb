@@ -2,8 +2,7 @@ class FavoritesController < ApplicationController
   before_action :authenticate
 
   def index
-    user = User.find(current_user.id)
-    @favorite_recipes = user.favorite_recipes
+    @favorite_recipes = current_user.favorite_recipes
   end
 
   def create
@@ -22,7 +21,7 @@ class FavoritesController < ApplicationController
   
   def destroy
     @recipe = Recipe.find(params[:recipe_id])
-    favorite = Favorite.find_by(recipe_id: @recipe.id, user_id: current_user.id)
+    favorite = current_user.favorites.find_by(recipe: @recipe)
     favorite.destroy
     render turbo_stream: turbo_stream.replace(
       'favorite',
