@@ -30,8 +30,8 @@
 !/tmp/storage/.keep
 
 /public/assets
-
 /public/uploads
+app/assets/images/default.jpeg
 
 .DS_Store
 
